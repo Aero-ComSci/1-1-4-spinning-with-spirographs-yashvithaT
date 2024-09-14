@@ -138,3 +138,4 @@ while True:
         if x <= -100:
             break 
 
+#turtle will keep tracing the shape
