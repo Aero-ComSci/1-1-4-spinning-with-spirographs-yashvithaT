@@ -13,7 +13,7 @@ for i in range(G):
     t.penup()
     t.goto(-current_size / 2, current_size / 2)  
     t.pendown()
-
+#fun colors!!!
     t.color(random.choice(["medium purple", "light blue", "orchid", "violet", "medium orchid", "steel blue"]))
     
     for _ in range(4):  
