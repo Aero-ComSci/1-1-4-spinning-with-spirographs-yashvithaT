@@ -1,11 +1,63 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/SkD24yV8)
 # 1.1.4Spirographs
 
 *Complete the following.*
 
 1. Compare and contrast zero-iteration conditions and infinite loops.
+   Zero Iteration Conditions- Condition that always will evaluate to false, or at least will the first time. Code never runs because it never starts.
+
+Infinite Loops- Sequence of instructions that loops endlessly because condition is not met or code never breaks.
+
+Both- Both are dependent on conditions and have a loop structure.
+
+
+
+
+
 2. A link to your code where you solve the following problem. Take the screen size of 800px. Create code or algorithm that always places the object(s), up to 5, in the center an equal distance from one another and from the edges of the screen.
+```python
+import turtle as trtl
+
+# Setup turtle screen
+trtl.setup(800, 800)
+trtl.speed(0)
+trtl.hideturtle()
+trtl.penup()
+
+# Define variables
+circles = 5
+circle_radius = 40
+circle_length = circle_radius * 2
+space = 20  
+spacing = trtl.window_width() / 2 + space + circle_radius / 2
+y = 0
+
+# Draw circles
+for i in range(circles):
+    trtl.goto(i * (circle_radius + space), y)
+    trtl.stamp()
+    trtl.circle(50)
+    trtl.penup()
+    trtl.forward(150)
+    trtl.pendown()
+
+# Main loop
+wn = trtl.Screen()
+wn.mainloop()
+```
+
+
+
+
+
+
+
+
+
 3. Concentric Squares -- Add a screenshot of your result and the code to create it on your repo.
 Objective: Write a Python program using the turtle module to draw a pattern of concentric squares. The pattern should be created using nested loops.
+![image](https://github.com/user-attachments/assets/116c3dc5-3acf-4350-a22d-fc20558c8362)
+
 
 Instructions:
 
