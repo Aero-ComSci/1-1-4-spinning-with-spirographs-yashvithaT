@@ -17,22 +17,37 @@ Both- Both are dependent on conditions and have a loop structure.
 2. A link to your code where you solve the following problem. Take the screen size of 800px. Create code or algorithm that always places the object(s), up to 5, in the center an equal distance from one another and from the edges of the screen.
 ```python
 import turtle as trtl
+
+# Setup turtle screen
 trtl.setup(800, 800)
 trtl.speed(0)
 trtl.hideturtle()
 trtl.penup()
-trtl.goto(-300,0)
-trtl.pendown()
-for i in range(5):
+
+# Define variables
+circles = 5
+circle_radius = 40
+circle_length = circle_radius * 2
+space = 20  
+spacing = trtl.window_width() / 2 + space + circle_radius / 2
+y = 0
+
+# Draw circles
+for i in range(circles):
+    trtl.goto(i * (circle_radius + space), y)
+    trtl.stamp()
     trtl.circle(50)
     trtl.penup()
     trtl.forward(150)
     trtl.pendown()
+
+# Main loop
+wn = trtl.Screen()
+wn.mainloop()
 ```
 
 
-wn = trtl.Screen()
-wn.mainloop()
+
 
 
 
