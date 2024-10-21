@@ -5,6 +5,22 @@
 
 1. Compare and contrast zero-iteration conditions and infinite loops.
 2. A link to your code where you solve the following problem. Take the screen size of 800px. Create code or algorithm that always places the object(s), up to 5, in the center an equal distance from one another and from the edges of the screen.
+import turtle as trtl
+trtl.setup(800, 800)
+trtl.speed(0)
+trtl.hideturtle()
+trtl.penup()
+trtl.goto(-300,0)
+trtl.pendown()
+for i in range(5):
+    trtl.circle(50)
+    trtl.penup()
+    trtl.forward(150)
+    trtl.pendown()
+
+
+wn = trtl.Screen()
+wn.mainloop()
 3. Concentric Squares -- Add a screenshot of your result and the code to create it on your repo.
 Objective: Write a Python program using the turtle module to draw a pattern of concentric squares. The pattern should be created using nested loops.
 ![image](https://github.com/user-attachments/assets/116c3dc5-3acf-4350-a22d-fc20558c8362)
